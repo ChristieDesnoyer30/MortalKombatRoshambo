@@ -3,11 +3,18 @@ package com.detroitlabs.mortalkombatroshambo.Model;
 public class MortalKombatCharacter {
 
     private String characterName;
-    private String description;
+    private String gender;
+    private String origin;
+    private String resides;
+    private String species;
 
-    public MortalKombatCharacter(String characterName, String description) {
+    public MortalKombatCharacter(String characterName, String gender, String origin
+            , String resides, String species) {
         this.characterName = characterName;
-        this.description = description;
+        this.gender = gender;
+        this.origin = origin;
+        this.resides = resides;
+        this.species = species;
     }
 
     public String getCharacterName() {
@@ -18,17 +25,35 @@ public class MortalKombatCharacter {
         this.characterName = characterName;
     }
 
-    public String getDescription() {
-        return description;
+    public String getGender() {
+        return gender;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-    @Override
-    public String toString() {
-        return "character name-'" + characterName + '\'' +
-                ", description -'" + description;
+    public String getOrigin() {
+        return origin;
+    }
+
+    public void setOrigin(String origin) {
+        this.origin = origin;
+    }
+
+    public String getResides() {
+        return resides;
+    }
+
+    public void setResides(String resides) {
+        this.resides = resides;
+    }
+
+    public String getSpecies() {
+        return species;
+    }
+
+    public void setSpecies(String species) {
+        this.species = species;
     }
 }
