@@ -8,3 +8,10 @@
 #innerContainer {
     width: 40%;
 }
+
+img {
+    border: 3px solid white;
+}
+img:hover {
+    border: 3px solid lime;
+}

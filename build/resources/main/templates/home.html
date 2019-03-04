@@ -6,15 +6,19 @@
     <link rel ="stylesheet" href="index.css"/>
 </head>
 <body>
+
+
+
+
 <form action ="createplayer" method="get">
     <input type="text" name="playername" placeholder="Enter your name..."/>
 <div class ="container" id="parentContainer">
 
 <div th:each="player : ${players}" id ="innerContainer" align="center">
-    <img th:src="@{'/images/' + ${player.getImagePathName()} + '.jpg'}" alt="Avatar"/>
+    <img th:src="@{'/images/' + ${player.getImagePathName()} + '.jpg'}" alt="Avatar" width="150px" height="150px" />
     <p th:text="${player.characterName}">John Doe</p>
     <input type="hidden" th:name="character" th:value="${player.characterName}"/>
-    <input type="submit" name="chooseplayer" th:value="'Choose' +${player.characterName}"/>
+    <input type="submit" name="chooseplayer" th:value="'Choose ' +${player.characterName}"/>
 </div>
 </div>
 </div>
