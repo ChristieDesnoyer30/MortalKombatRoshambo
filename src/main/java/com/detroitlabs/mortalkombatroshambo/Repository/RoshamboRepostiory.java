@@ -42,11 +42,11 @@ public class RoshamboRepostiory {
         if(playerChoice.equals(computerChoice)){
             gameOutcome = "Tie!";
         } else if (playerChoice.equals(rock) && computerChoice.equals(scissors)){
-            gameOutcome = "Player Wins!";
+            gameOutcome = "Player Wins!!!";
         } else if (playerChoice.equals(paper) && computerChoice.equals(rock)){
-            gameOutcome = "Player Wins!";
+            gameOutcome = "Player Wins!!!";
         } else if (playerChoice.equals(scissors) && computerChoice.equals(paper)){
-            gameOutcome = "Player Wins!";
+            gameOutcome = "Player Wins!!!";
         } else {
             gameOutcome = "Computer Wins...";
         }

@@ -41,4 +41,21 @@ public class RoshamboRepostioryTest {
         assertThat(paperResult, equalTo("Paper"));
         assertThat(scissorsResult, equalTo("Scissors"));
     }
+
+    @Test
+    public void findGameOutcome() {
+        //Act
+        String tieResult = roshamboRepostiory.findGameOutcome("Rock", "Rock");
+        String winRockResult = roshamboRepostiory.findGameOutcome("Rock", "Scissors");
+        String winPaperResult = roshamboRepostiory.findGameOutcome("Paper", "Rock");
+        String winScissorsResult = roshamboRepostiory.findGameOutcome("Scissors", "Paper");
+        String loseResult = roshamboRepostiory.findGameOutcome("Rock", "Paper");
+
+        //Assert
+        assertThat(tieResult, equalTo("Tie!"));
+        assertThat(winRockResult, equalTo("Player Wins!!!"));
+        assertThat(winPaperResult, equalTo("Player Wins!!!"));
+        assertThat(winScissorsResult, equalTo("Player Wins!!!"));
+        assertThat(loseResult, equalTo("Computer Wins..."));
+    }
 }
