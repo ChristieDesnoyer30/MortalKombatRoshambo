@@ -4,6 +4,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 @Repository
 public class RoshamboRepostiory {
@@ -17,6 +18,19 @@ public class RoshamboRepostiory {
         }
 
         return null;
+    }
+
+    public int generateRandomNumber(){
+        Random random = new Random();
+        int index = random.nextInt(ALL_ROSHAMBO_OPTIONS.size());
+
+        return index;
+    }
+
+    public String findComputerPlayerChoice(int index){
+        String choice = ALL_ROSHAMBO_OPTIONS.get(index);
+
+        return choice;
     }
 }
 

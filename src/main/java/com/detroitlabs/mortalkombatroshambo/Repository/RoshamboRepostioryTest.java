@@ -28,4 +28,17 @@ public class RoshamboRepostioryTest {
         assertThat(paperResult, equalTo("Paper"));
         assertThat(scissorsResult, equalTo("Scissors"));
     }
+
+    @Test
+    public void findComputerPlayerChoice() {
+        //Act
+        String rockResult = roshamboRepostiory.findComputerPlayerChoice(0);
+        String paperResult = roshamboRepostiory.findComputerPlayerChoice(1);
+        String scissorsResult = roshamboRepostiory.findComputerPlayerChoice(2);
+
+        //Assert
+        assertThat(rockResult, equalTo("Rock"));
+        assertThat(paperResult, equalTo("Paper"));
+        assertThat(scissorsResult, equalTo("Scissors"));
+    }
 }
