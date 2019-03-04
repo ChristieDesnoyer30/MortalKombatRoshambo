@@ -8,6 +8,10 @@ public class MortalKombatCharacter {
     private String resides;
     private String species;
 
+    public String getImagePathName(){
+        return  getCharacterName().toLowerCase().replace(" ", "");
+    }
+
     public MortalKombatCharacter(String characterName, String gender, String origin
             , String resides, String species) {
         this.characterName = characterName;

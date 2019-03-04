@@ -1,11 +1,12 @@
 package com.detroitlabs.mortalkombatroshambo.Repository;
 
 import com.detroitlabs.mortalkombatroshambo.Model.MortalKombatCharacter;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.List;
 
-
+@Component
 public class MortalKombatRepository {
 
     private static final List<MortalKombatCharacter> ALL_CHARACTERS = Arrays.asList(
