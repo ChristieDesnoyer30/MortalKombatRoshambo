@@ -5,6 +5,7 @@ import com.detroitlabs.mortalkombatroshambo.Model.MortalKombatCharacter;
 import java.util.Arrays;
 import java.util.List;
 
+
 public class MortalKombatRepository {
 
     private static final List<MortalKombatCharacter> ALL_CHARACTERS = Arrays.asList(
