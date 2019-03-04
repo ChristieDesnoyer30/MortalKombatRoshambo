@@ -1,13 +1,14 @@
 package com.detroitlabs.mortalkombatroshambo.Model;
 
-public class Player extends MortalKombatCharacter {
+public class Player {
 
     private String name;
-    int numberOfWins;
+    private MortalKombatCharacter playersCharacterChoice;
+    private int numberOfWins;
 
-    public Player(String characterName, String description, String name) {
-        super(characterName, description);
+    public Player(String name, MortalKombatCharacter playersCharacterChoice) {
         this.name = name;
+        this.playersCharacterChoice = playersCharacterChoice;
         this.numberOfWins = 0;
     }
 
