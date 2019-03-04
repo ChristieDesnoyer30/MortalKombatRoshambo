@@ -32,5 +32,26 @@ public class RoshamboRepostiory {
 
         return choice;
     }
+
+    public String findGameOutcome(String playerChoice, String computerChoice){
+        String gameOutcome;
+        String rock = ALL_ROSHAMBO_OPTIONS.get(0);
+        String paper = ALL_ROSHAMBO_OPTIONS.get(1);
+        String scissors = ALL_ROSHAMBO_OPTIONS.get(2);
+
+        if(playerChoice.equals(computerChoice)){
+            gameOutcome = "Tie!";
+        } else if (playerChoice.equals(rock) && computerChoice.equals(scissors)){
+            gameOutcome = "Player Wins!";
+        } else if (playerChoice.equals(paper) && computerChoice.equals(rock)){
+            gameOutcome = "Player Wins!";
+        } else if (playerChoice.equals(scissors) && computerChoice.equals(paper)){
+            gameOutcome = "Player Wins!";
+        } else {
+            gameOutcome = "Computer Wins...";
+        }
+
+        return gameOutcome;
+    }
 }
 
