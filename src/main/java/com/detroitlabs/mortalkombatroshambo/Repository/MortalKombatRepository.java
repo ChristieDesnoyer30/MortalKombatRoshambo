@@ -27,6 +27,7 @@ public class MortalKombatRepository {
                     ,"Edenia","Edenian")
     );
 
+
     public List<MortalKombatCharacter> showAllMortalKombatCharacters(){
 
         return ALL_CHARACTERS;
