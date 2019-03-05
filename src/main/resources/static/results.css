@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Permanent+Marker');
+
+body{
+    /*background-image: url();*/
+    background-repeat: no-repeat;
+    background-size:cover
+}
+
+p{
+    font-family: "kaushan Script";
+    font-size: 55px;
+}

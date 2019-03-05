@@ -1,4 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Permanent+Marker');
+
 body{
     background-image: url("/images/MKBackground.jpg");
+    background-repeat: no-repeat;
+    background-size:cover
 }
+
+h1{
+    font-family: "Kaushan Script";
+}
+
+#secondPlayer{
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+input[type=submit] {padding:5px 15px; background:#ccc; border:0 none;
+    font-family: "Kaushan Script";
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; }
 

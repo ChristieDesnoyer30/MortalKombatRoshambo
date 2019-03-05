@@ -4,32 +4,31 @@
     <meta charset="UTF-8">
     <title>Fight!</title>
     <link rel ="stylesheet" href="game.css"/>
-    <style>
+    <style>#info {
+        height: 40px;
+        position: fixed;
+        bottom:30%;
+        width:100%;
+        opacity: 1;
+    }</style>
 
-        #secondPlayer{
-            -moz-transform: scaleX(-1);
-            -o-transform: scaleX(-1);
-            -webkit-transform: scaleX(-1);
-            transform: scaleX(-1);
-            filter: FlipH;
-            -ms-filter: "FlipH";
-        }
-    </style>
 </head>
 <body>
 
-<div class="container">
-    <img src="/gifs/johnnycage.gif"/>
-    <img src="/gifs/kano.gif" id="secondPlayer"/>
-<img src="'/gifs/' + ${player.getPlayersCharacterChoice.getImagePathName() + '.gif'"/>
+<div class="container" align="center"><img src="http://www.jemome.com/cdn/2013/12/mortal-kombat-fight-logo_1977583.png"/></div>
+<div class="container"></div>
+<div class="container" align="center"> <h1>Choose your throw</h1>
+    <form action="throw" method="get" >
+        <input type="radio" name="throw" value="Rock"  required>ROCK</input>
+        <input type="radio" name="throw" value="Paper"  required>PAPER</input>
+        <input type="radio" name="throw" value="Scissors"  required>SCISSOR</input>
+        <input type="submit" value="FINISH THEM" name="roshambo">
+    </form></div>
+
+<div class="container" align="center" id="info"> <img th:src="@{'/gifs/' + ${player.getImagePathName()} + '.gif'}"  style="margin: 20px 50px" width="7%"/>
+    <img th:src="@{'/gifs/' + ${computer.getImagePathName()} + '.gif'}" id="secondPlayer"  style="margin: 20px 50px" width="7%"/>
 </div>
-<h1>Choose your throw</h1>
-<form action="throw" method="get">
-    <input type="radio" name="throw" value="Rock">ROCK</input>
-<input type="radio" name="throw" value="Paper">PAPER</input>
-<input type="radio" name="throw" value="Scissors">SCISSOR</input>
-    <input type="submit" value="Throw your move" name="roshambo">
-</form>
+
 
 
 

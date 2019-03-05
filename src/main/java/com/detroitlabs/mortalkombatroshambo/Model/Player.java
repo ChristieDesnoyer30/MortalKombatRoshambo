@@ -12,6 +12,12 @@ public class Player {
         this.numberOfWins = 0;
     }
 
+    public Player(MortalKombatCharacter playersCharacterChoice) {
+        this.name = "Joe Schmo";
+        this.playersCharacterChoice = playersCharacterChoice;
+        this.numberOfWins = 0;
+    }
+
     public MortalKombatCharacter getPlayersCharacterChoice() {
         return playersCharacterChoice;
     }
