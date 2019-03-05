@@ -33,6 +33,10 @@ public class GameController {
      String outcome = roshamboRepostiory.findGameOutcome(roshamboChoice,compChoice);
        System.out.println(outcome);
 
+       mv.addObject("player", playerChoice);
+       mv.addObject("computer", compChoice);
+       mv.addObject("result", outcome);
+
         return mv;
     }
 

@@ -12,6 +12,14 @@ public class Player {
         this.numberOfWins = 0;
     }
 
+    public MortalKombatCharacter getPlayersCharacterChoice() {
+        return playersCharacterChoice;
+    }
+
+    public void setPlayersCharacterChoice(MortalKombatCharacter playersCharacterChoice) {
+        this.playersCharacterChoice = playersCharacterChoice;
+    }
+
     public String getName() {
         return name;
     }
