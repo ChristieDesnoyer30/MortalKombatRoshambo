@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 @Component
 public class MortalKombatRepository {
@@ -37,6 +38,14 @@ public class MortalKombatRepository {
         }
 
         return null;
+    }
+
+    public MortalKombatCharacter findComputerPlayersCharacter(){
+        Random random = new Random();
+
+        MortalKombatCharacter character = ALL_CHARACTERS.get(random.nextInt(ALL_CHARACTERS.size()));
+
+        return character;
     }
 
 
