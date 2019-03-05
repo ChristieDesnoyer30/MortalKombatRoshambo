@@ -18,18 +18,20 @@
 </head>
 <body>
 
-<div class="container">
-    <img src="/gifs/johnnycage.gif"/>
-    <img src="/gifs/kano.gif" id="secondPlayer"/>
-<img src="'/gifs/' + ${player.getPlayersCharacterChoice.getImagePathName() + '.gif'"/>
+<div class="container" align="center">
+<img th:src="@{'/gifs/' + ${player.getImagePathName()} + '.gif'}" width="7%"/>
+   <h1>Choose your throw</h1>
+    <form action="throw" method="get" >
+        <input type="radio" name="throw" value="Rock">ROCK</input>
+        <input type="radio" name="throw" value="Paper">PAPER</input>
+        <input type="radio" name="throw" value="Scissors">SCISSOR</input>
+        <input type="submit" value="Throw your move" name="roshambo">
+    </form>
+        </span>
+  <img th:src="@{'/gifs/' + ${computer.getImagePathName()} + '.gif'}" id="secondPlayer"  width="7%"/>
+
 </div>
-<h1>Choose your throw</h1>
-<form action="throw" method="get">
-    <input type="radio" name="throw" value="Rock">ROCK</input>
-<input type="radio" name="throw" value="Paper">PAPER</input>
-<input type="radio" name="throw" value="Scissors">SCISSOR</input>
-    <input type="submit" value="Throw your move" name="roshambo">
-</form>
+
 
 
 
