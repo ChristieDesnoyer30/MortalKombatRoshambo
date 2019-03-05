@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Fight!</title>
     <link rel ="stylesheet" href="game.css"/>
 </head>
 <body>
+
+<h1>Choose your option</h1>
+<ul>
+    <li><input type="radio" th:field="rock" value="Rock" /></li>
+    <li><input type="radio" th:field="paper" value="Paper" /></li>
+    <li><input type="radio" th:field="scissor" value="Scissor" /></li>
+</ul>
+
+
+
 
 </body>
 </html>
