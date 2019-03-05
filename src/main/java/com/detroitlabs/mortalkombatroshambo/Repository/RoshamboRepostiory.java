@@ -1,5 +1,6 @@
 package com.detroitlabs.mortalkombatroshambo.Repository;
 
+import com.detroitlabs.mortalkombatroshambo.Model.Player;
 import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
@@ -33,7 +34,7 @@ public class RoshamboRepostiory {
         return choice;
     }
 
-    public String findGameOutcome(String playerChoice, String computerChoice){
+    public String findGameOutcome(Player player, String playerChoice, String computerChoice){
         String gameOutcome;
         String rock = ALL_ROSHAMBO_OPTIONS.get(0);
         String paper = ALL_ROSHAMBO_OPTIONS.get(1);
@@ -43,10 +44,16 @@ public class RoshamboRepostiory {
             gameOutcome = "Tie!";
         } else if (playerChoice.equals(rock) && computerChoice.equals(scissors)){
             gameOutcome = "Player Wins!!!";
+           int score = player.getNumberOfWins() + 1;
+           player.setNumberOfWins(score);
         } else if (playerChoice.equals(paper) && computerChoice.equals(rock)){
             gameOutcome = "Player Wins!!!";
+            int score = player.getNumberOfWins() + 1;
+            player.setNumberOfWins(score);
         } else if (playerChoice.equals(scissors) && computerChoice.equals(paper)){
             gameOutcome = "Player Wins!!!";
+            int score = player.getNumberOfWins() + 1;
+            player.setNumberOfWins(score);
         } else {
             gameOutcome = "Computer Wins...";
         }

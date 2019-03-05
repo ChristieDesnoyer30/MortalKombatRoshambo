@@ -14,6 +14,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class GameController {
+
+    Player player;
+
     @Autowired
     RoshamboRepostiory roshamboRepostiory;
 
@@ -27,6 +30,7 @@ public class GameController {
         MortalKombatCharacter playersCharacter = mortalKombatRepository.findPlayersCharacter(characterName);
 
         MortalKombatCharacter cpuCharacter = mortalKombatRepository.findComputerPlayersCharacter();
+        player = new Player(playersCharacter);
 
         mv.addObject("player", playersCharacter);
         mv.addObject("computer", cpuCharacter);
@@ -36,18 +40,21 @@ public class GameController {
     @RequestMapping("throw")
     public ModelAndView gameResults(@RequestParam("throw") String roshamboChoice){
         ModelAndView mv = new ModelAndView("results");
-        System.out.println(roshamboChoice);
+
         String playerChoice = roshamboRepostiory.findPlayersChoice(roshamboChoice);
         System.out.println(playerChoice);
         int computerChoice = roshamboRepostiory.generateRandomNumber();
        String compChoice= roshamboRepostiory.findComputerPlayerChoice(computerChoice);
         System.out.println(compChoice);
-     String outcome = roshamboRepostiory.findGameOutcome(roshamboChoice,compChoice);
+     String outcome = roshamboRepostiory.findGameOutcome(player, roshamboChoice,compChoice);
        System.out.println(outcome);
+
+        int numberOfWins = player.getNumberOfWins();
 
        mv.addObject("player", playerChoice);
        mv.addObject("computer", compChoice);
        mv.addObject("result", outcome);
+       mv.addObject("wins", numberOfWins);
 
         return mv;
     }
