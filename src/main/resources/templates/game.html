@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <title>Fight!</title>
     <link rel ="stylesheet" href="game.css"/>
+    <style>
+
+        #secondPlayer{
+            -moz-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            filter: FlipH;
+            -ms-filter: "FlipH";
+        }
+    </style>
 </head>
 <body>
 
-
-<img src="'/gifs/' + ${player.getPlayersCharacterChoice.getImagePathName() + '.gif'}"/>
-
+<div class="container">
+    <img src="/gifs/johnnycage.gif"/>
+    <img src="/gifs/kano.gif" id="secondPlayer"/>
+<img src="'/gifs/' + ${player.getPlayersCharacterChoice.getImagePathName() + '.gif'"/>
+</div>
 <h1>Choose your throw</h1>
 <form action="throw" method="get">
     <input type="radio" name="throw" value="Rock">ROCK</input>

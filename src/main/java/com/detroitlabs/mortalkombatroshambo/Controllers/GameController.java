@@ -15,8 +15,9 @@ public class GameController {
     RoshamboRepostiory roshamboRepostiory;
 
     @RequestMapping("createplayer")
-    public ModelAndView showGamePage(){
+    public ModelAndView showGamePage(@RequestParam("character") String characterName){
         ModelAndView mv = new ModelAndView("game");
+        System.out.println(characterName);
 
         return mv;
     }
