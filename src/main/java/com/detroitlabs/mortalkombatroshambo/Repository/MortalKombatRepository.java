@@ -29,6 +29,16 @@ public class MortalKombatRepository {
                     ,"Edenia","Edenian")
     );
 
+    public MortalKombatCharacter findPlayersCharacter(String name){
+        for (MortalKombatCharacter character : ALL_CHARACTERS){
+            if (character.getCharacterName().equalsIgnoreCase(name)){
+                return character;
+            }
+        }
+
+        return null;
+    }
+
 
     public List<MortalKombatCharacter> showAllMortalKombatCharacters(){
 
