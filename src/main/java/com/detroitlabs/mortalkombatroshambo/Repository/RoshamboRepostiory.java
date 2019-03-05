@@ -12,7 +12,7 @@ public class RoshamboRepostiory {
 
     public String findPlayersChoice(String playersChoice){
         for (String choice : ALL_ROSHAMBO_OPTIONS){
-            if (choice.equalsIgnoreCase(playersChoice)){
+            if (playersChoice.equalsIgnoreCase(choice)){
                 return choice;
             }
         }

@@ -7,13 +7,13 @@
 </head>
 <body>
 
-<h1>Choose your option</h1>
-<ul>
-    <li><input type="radio" th:field="rock" value="Rock" /></li>
-    <li><input type="radio" th:field="paper" value="Paper" /></li>
-    <li><input type="radio" th:field="scissor" value="Scissor" /></li>
-</ul>
-
+<h1>Choose your throw</h1>
+<form action="throw" method="get">
+    <input type="radio" name="throw" value="Rock">ROCK</input>
+<input type="radio" name="throw" value="Paper">PAPER</input>
+<input type="radio" name="throw" value="Scissors">SCISSOR</input>
+    <input type="submit" value="Throw your move" name="roshambo">
+</form>
 
 
 
