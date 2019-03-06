@@ -29,7 +29,7 @@ public class GameController {
     public ModelAndView showGamePage(@RequestParam("character") String characterName){
         ModelAndView mv = new ModelAndView("game");
         MortalKombatCharacter playersCharacter = mortalKombatRepository.findPlayersCharacter(characterName);
-        MortalKombatCharacter cpuCharacter = mortalKombatRepository.findComputerPlayersCharacter();
+        MortalKombatCharacter cpuCharacter = mortalKombatRepository.findComputerPlayersCharacter(characterName);
         player = new Player(playersCharacter);
         mv.addObject("player", playersCharacter);
         mv.addObject("computer", cpuCharacter);
