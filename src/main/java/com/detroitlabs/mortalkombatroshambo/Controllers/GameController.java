@@ -21,20 +21,7 @@ public class GameController {
     @Autowired
     RoshamboRepostiory roshamboRepostiory;
 
-    @Autowired
-    MortalKombatRepository mortalKombatRepository;
 
-
-    @RequestMapping("createplayer")
-    public ModelAndView showGamePage(@RequestParam("character") String characterName){
-        ModelAndView mv = new ModelAndView("game");
-        MortalKombatCharacter playersCharacter = mortalKombatRepository.findPlayersCharacter(characterName);
-        MortalKombatCharacter cpuCharacter = mortalKombatRepository.findComputerPlayersCharacter(characterName);
-        player = new Player(playersCharacter);
-        mv.addObject("player", playersCharacter);
-        mv.addObject("computer", cpuCharacter);
-        return mv;
-    }
 
     @RequestMapping("throwRoshambo")
     public ModelAndView gameResults(@RequestParam("throwChoice") String roshamboChoice){
