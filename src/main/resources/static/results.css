@@ -1,12 +1,29 @@
-@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=VT323');
 
-body{
-    /*background-image: url();*/
+body {
+    background-image: url("/images/homebackground.jpg");
     background-repeat: no-repeat;
-    background-size:cover
+    background-size: cover;
 }
+#kocontainer {
+    height: 0px;
 
-p{
-    font-family: "kaushan Script";
-    font-size: 55px;
 }
+#textcontainter{
+    margin: 7%;
+}
+p{
+    font-family: "VT323";
+    font-size: 70px;
+    text-shadow: 2px 2px 8px #FF0000;
+}
+a {
+    appearance:button; /* For Good Browsers */
+    -moz-appearance:button; /* For Firefox */
+    -webkit-appearance:button; /* For Safari and Chrome */
+    font-family: "VT323";
+    font-size: 22px;
+    padding: 5px 15px;
+    color: #000;
+    text-decoration: none;
+}​

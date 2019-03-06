@@ -37,8 +37,8 @@ public class GameController {
         return mv;
     }
 
-    @RequestMapping("throw")
-    public ModelAndView gameResults(@RequestParam("throw") String roshamboChoice){
+    @RequestMapping("throwRoshambo")
+    public ModelAndView gameResults(@RequestParam("throwChoice") String roshamboChoice){
         ModelAndView mv = new ModelAndView("results");
 
         String playerChoice = roshamboRepostiory.findPlayersChoice(roshamboChoice);

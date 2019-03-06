@@ -17,13 +17,21 @@
 
 <div class="container" align="center"><img src="http://www.jemome.com/cdn/2013/12/mortal-kombat-fight-logo_1977583.png"/></div>
 <div class="container"></div>
-<div class="container" align="center"> <h1>Choose your throw</h1>
-    <form action="throw" method="get" >
-        <input type="radio" name="throw" value="Rock"  required>ROCK</input>
-        <input type="radio" name="throw" value="Paper"  required>PAPER</input>
-        <input type="radio" name="throw" value="Scissors"  required>SCISSOR</input>
+
+<div class="container" align="center">
+    <h1>Choose your throw</h1>
+    <p></p>
+    <form action="throwRoshambo" method="get" >
+        <input type="radio" name="throwChoice" value="Rock"  required>ROCK</input>
+        <input type="radio" name="throwChoice" value="Paper"  required>PAPER</input>
+        <input type="radio" name="throwChoice" value="Scissors"  required>SCISSOR</input>
+        <p></p>
         <input type="submit" value="FINISH THEM" name="roshambo">
-    </form></div>
+    </form>
+</div>
+<div class="container" align="center" id="options">
+
+</div>
 
 <div class="container" align="center" id="info"> <img th:src="@{'/gifs/' + ${player.getImagePathName()} + '.gif'}"  style="margin: 20px 50px" width="7%"/>
     <img th:src="@{'/gifs/' + ${computer.getImagePathName()} + '.gif'}" id="secondPlayer"  style="margin: 20px 50px" width="7%"/>
