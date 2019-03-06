@@ -8,8 +8,11 @@ body{
 
 h1{
     font-family: "VT323";
+    font-size: 40px;
     display:inline;
-    background-color: darkred;
+    background: rgb(247,1,1);
+    background: linear-gradient(184deg, rgba(247,1,1,1) 0%,
+    rgba(255,61,61,1) 35%, rgba(255,121,0,1) 76%, rgba(255,173,0,1) 100%);
 }
 
 #secondPlayer{
@@ -23,6 +26,7 @@ h1{
 
 input[type=submit] {padding:5px 15px; background:#ccc; border:0 none;
     font-family: "VT323";
+    font-size: 20px;
     cursor:pointer;
     -webkit-border-radius: 5px;
     border-radius: 5px; }
@@ -30,5 +34,8 @@ input[type=submit] {padding:5px 15px; background:#ccc; border:0 none;
 form {
     display:inline;
     font-family: "VT323";
-    background-color: darkred;
+    font-size: 20px;
+    background: rgb(247,1,1);
+    background: linear-gradient(184deg, rgba(247,1,1,1) 0%,
+    rgba(255,61,61,1) 35%, rgba(255,121,0,1) 76%, rgba(255,173,0,1) 100%);
 }
