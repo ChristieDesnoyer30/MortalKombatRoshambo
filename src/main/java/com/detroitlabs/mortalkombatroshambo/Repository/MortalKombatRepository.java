@@ -40,12 +40,17 @@ public class MortalKombatRepository {
         return null;
     }
 
-    public MortalKombatCharacter findComputerPlayersCharacter(){
+    public MortalKombatCharacter findComputerPlayersCharacter(String playersName){
         Random random = new Random();
+        MortalKombatCharacter characterName;
 
-        MortalKombatCharacter character = ALL_CHARACTERS.get(random.nextInt(ALL_CHARACTERS.size()));
+        do {
+          characterName = ALL_CHARACTERS.get(random.nextInt(ALL_CHARACTERS.size()));
 
-        return character;
+        }while(playersName.equalsIgnoreCase(characterName.getCharacterName()));
+
+            return characterName;
+
     }
 
 
