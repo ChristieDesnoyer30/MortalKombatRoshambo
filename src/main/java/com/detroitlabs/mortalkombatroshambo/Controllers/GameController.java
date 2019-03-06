@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 
@@ -28,27 +29,20 @@ public class GameController {
     public ModelAndView showGamePage(@RequestParam("character") String characterName){
         ModelAndView mv = new ModelAndView("game");
         MortalKombatCharacter playersCharacter = mortalKombatRepository.findPlayersCharacter(characterName);
-
         MortalKombatCharacter cpuCharacter = mortalKombatRepository.findComputerPlayersCharacter();
         player = new Player(playersCharacter);
-
         mv.addObject("player", playersCharacter);
         mv.addObject("computer", cpuCharacter);
         return mv;
     }
 
-    @RequestMapping("throw")
-    public ModelAndView gameResults(@RequestParam("throw") String roshamboChoice){
+    @RequestMapping("throwRoshambo")
+    public ModelAndView gameResults(@RequestParam("throwChoice") String roshamboChoice){
         ModelAndView mv = new ModelAndView("results");
-
         String playerChoice = roshamboRepostiory.findPlayersChoice(roshamboChoice);
-        System.out.println(playerChoice);
         int computerChoice = roshamboRepostiory.generateRandomNumber();
-       String compChoice= roshamboRepostiory.findComputerPlayerChoice(computerChoice);
-        System.out.println(compChoice);
-     String outcome = roshamboRepostiory.findGameOutcome(player, roshamboChoice,compChoice);
-       System.out.println(outcome);
-
+        String compChoice= roshamboRepostiory.findComputerPlayerChoice(computerChoice);
+        String outcome = roshamboRepostiory.findGameOutcome(player, roshamboChoice,compChoice);
         int numberOfWins = player.getNumberOfWins();
 
        mv.addObject("player", playerChoice);

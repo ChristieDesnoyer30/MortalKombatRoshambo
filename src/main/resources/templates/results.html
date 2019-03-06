@@ -7,14 +7,18 @@
 </head>
 <body>
 
-<div class="container" align="center">
+<div class ="container" align="center" id="kocontainer">
+    <img src="/images/ko.png"/>
+</div>
+
+<div class="container" align="center" id="textcontainter">
 <p th:text="'You throw ' + ${player}">Player throw</p>
 <p th:text="'Computer throws ' +${computer}">Player throw</p>
 <p th:text="'Results ' +${result}">Player throw</p>
 <p th:text="'Number of wins: ' + ${wins}">Player throw</p>
 </div>
-
-
-<a href ="/" class="button">Play Again?</a>
+<div class = "container" align="center">
+<a href="/">Play Again?</a>
+</div>
 </body>
 </html>
