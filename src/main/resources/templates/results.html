@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>KO</title>
+    <link rel="icon" type="image/ico" href="images/mortalKombatLogo.png" />
     <link rel="stylesheet" href="results.css"/>
 </head>
 <body>
@@ -12,10 +13,10 @@
 </div>
 
 <div class="container" align="center" id="textcontainter">
-<p th:text="'You throw ' + ${player}">Player throw</p>
-<p th:text="'Computer throws ' +${computer}">Player throw</p>
-<p th:text="'Results ' +${result}">Player throw</p>
-<p th:text="'Number of wins: ' + ${wins}">Player throw</p>
+<p th:text="'You threw: ' + ${player}"></p>
+<p th:text="'Computer threw: ' +${computer}"></p>
+<p th:text="${result}"></p>
+<p th:text="'Number of wins: ' + ${wins}"></p>
 </div>
 <div class = "container" align="center">
 <a href="/">Play Again?</a>
