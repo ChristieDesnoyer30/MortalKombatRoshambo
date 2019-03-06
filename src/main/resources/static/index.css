@@ -6,6 +6,7 @@
     justify-content: center;
     flex-wrap: wrap;
     height: 100%;
+    padding-bottom: 5%;
 }
 #innerContainer {
     padding: 0%;
@@ -30,6 +31,17 @@
     font-weight: 700;
     color: #ff0000;
     text-shadow: -1px 2px 0 #ff7200;
+}
+
+a {
+    appearance:button; /* For Good Browsers */
+    -moz-appearance:button; /* For Firefox */
+    -webkit-appearance:button; /* For Safari and Chrome */
+    font-family: "VT323";
+    font-size: 22px;
+    padding: 5px 15px;
+    color: #000;
+    text-decoration: none;
 }
 
 body{
