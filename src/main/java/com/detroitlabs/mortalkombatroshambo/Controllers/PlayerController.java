@@ -14,8 +14,6 @@ import java.util.List;
 @Controller
 public class PlayerController {
 
-    Player player;
-
     @Autowired
     MortalKombatRepository mortalKombatRepository;
 
@@ -34,14 +32,4 @@ public class PlayerController {
         return mv;
     }
 
-    @RequestMapping("createplayer")
-    public ModelAndView showGamePage(@RequestParam("character") String characterName){
-        ModelAndView mv = new ModelAndView("game");
-        MortalKombatCharacter playersCharacter = mortalKombatRepository.findPlayersCharacter(characterName);
-        MortalKombatCharacter cpuCharacter = mortalKombatRepository.findComputerPlayersCharacter(characterName);
-        player = new Player(playersCharacter);
-        mv.addObject("player", playersCharacter);
-        mv.addObject("computer", cpuCharacter);
-        return mv;
-    }
 }
