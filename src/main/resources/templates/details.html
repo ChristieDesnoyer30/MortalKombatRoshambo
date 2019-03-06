@@ -1,10 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Character Deets</title>
+
+    <link rel="icon" type="image/ico" href="images/mortalKombatLogo.png" />
+    <link rel ="stylesheet" href="deets.css"/>
 </head>
 <body>
-<h1>Hello, World!</h1>
+<h1>Character Details</h1>
+
+<table class="table" width="100%">
+    <thead>
+    <tr>
+        <th class="tableheadfont">Character Name</th>
+        <th class="tableheadfont">Gender</th>
+        <th class="tableheadfont">Origin</th>
+        <th class="tableheadfont">Location</th>
+        <th class="tableheadfont">Species</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="character : ${allCharacters}">
+        <td th:text="${character.characterName}" class="tablefont"></td>
+        <td th:text="${character.gender}" class="tablefont"></td>
+        <td th:text="${character.origin}" class="tablefont"></td>
+        <td th:text="${character.resides}" class="tablefont"></td>
+        <td th:text="${character.species}" class="tablefont"></td>
+
+
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
