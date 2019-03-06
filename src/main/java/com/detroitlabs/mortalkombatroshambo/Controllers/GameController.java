@@ -24,7 +24,6 @@ public class GameController {
     @Autowired
     MortalKombatRepository mortalKombatRepository;
 
-
     @RequestMapping("createplayer")
     public ModelAndView showGamePage(@RequestParam("character") String characterName){
         ModelAndView mv = new ModelAndView("game");
@@ -52,8 +51,5 @@ public class GameController {
 
         return mv;
     }
-
-
-
 
 }
