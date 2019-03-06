@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
 #parentContainer{
     display: flex;
     align-items: center;
@@ -9,26 +11,40 @@
     padding: 0%;
 }
 
-.top {
-    padding-bottom: 15%;
+.title{
+    padding-bottom: 5%;
 }
 
-.bottom {
-    padding-top: 15%;
+.titleText{
+    font-family: "VT323";
+    font-size: 5em;
+    text-align: center;
+    color: #ffee00;
+    text-shadow: -4px 3px 0 #eac700;
+}
+
+.characterName{
+    margin: 2%;
+    font-family: "VT323";
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #ff0000;
+    text-shadow: -1px 2px 0 #ff7200;
 }
 
 body{
     background-image: url("/images/homebackground.jpg");
     background-size: auto;
-    margin-top: 15%;
+    margin-top: 5%;
     margin-right: 25%;
     margin-left: 25%;
     margin-bottom: auto;
 }
 
 img {
-    border: 3px solid white;
+    border: 5px inset;
 }
+
 img:hover {
-    border: 3px solid lime;
+    border: solid 5px #90ff00;
 }
