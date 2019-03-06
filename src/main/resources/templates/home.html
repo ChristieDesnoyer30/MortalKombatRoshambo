@@ -2,16 +2,21 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Choose your player</title>
+    <title>Choose Your Fighter!</title>
+    <link rel="icon" type="image/ico" href="images/mortalKombatLogo.png" />
     <link rel ="stylesheet" href="index.css"/>
 </head>
 <body>
+
+<div class="title">
+    <h1 class="titleText">Choose Your Fighter!</h1>
+</div>
 
 <div class ="container" id="parentContainer">
 
 <div th:each="player : ${players}" id ="innerContainer" align="center">
     <img th:src="@{'/images/' + ${player.getImagePathName()} + '.jpg'}" alt="Avatar" width="150px" height="150px" />
-     <p th:text="${player.characterName}">John Doe</p>
+     <p class="characterName" th:text="${player.characterName}">John Doe</p>
     <form action ="createplayer" method="get">
     <input type="hidden" name="character" th:value="${player.characterName}"/>
     <input type="submit" name="chooseplayer" th:value="'Choose ' +${player.characterName}"/>
