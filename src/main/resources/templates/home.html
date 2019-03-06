@@ -15,14 +15,15 @@
 <div class ="container" id="parentContainer">
 
 <div th:each="player : ${players}" id ="innerContainer" align="center">
-    <img th:src="@{'/images/' + ${player.getImagePathName()} + '.jpg'}" alt="Avatar" width="150px" height="150px" />
-     <p class="characterName" th:text="${player.characterName}">John Doe</p>
     <form action ="createplayer" method="get">
-    <input type="hidden" name="character" th:value="${player.characterName}"/>
-    <input type="submit" name="chooseplayer" th:value="'Choose ' +${player.characterName}"/>
+    <input type ="image" th:src="@{'/images/' + ${player.getImagePathName()} + '.jpg'}" alt="Avatar" width="150px" height="150px" />
+     <p class="characterName" th:text="${player.characterName}">John Doe</p>
+
+    <input type="hidden" name="character" th:value="${player.characterName}"/>      <!--(' + @̣{/images/bg_shadow_left.png} + ')-->
     </form>
 </div>
 </div>
+
 </div>
 
 

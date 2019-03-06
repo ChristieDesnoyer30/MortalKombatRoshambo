@@ -41,10 +41,12 @@ body{
     margin-bottom: auto;
 }
 
-img {
+input[type=image] {
     border: 5px inset;
 }
 
-img:hover {
+input[type=image]:hover {
     border: solid 5px #90ff00;
+   ;
 }
+
